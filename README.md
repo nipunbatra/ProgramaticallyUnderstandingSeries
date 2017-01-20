@@ -1,6 +1,6 @@
 # ProgramaticallyUnderstandingSeries
 
-This repository contains a collection of IPython (Jupyter) notebooks that programatically explain concepts in statistics, machine learning, data science, etc. I had created these notebooks to get a better understanding of the concepts. It was often easier for me to understand an algorithm or concept if I could program it and then play around with the parameters and visualise the effect.
+This repository contains a collection of IPython (Jupyter) notebooks that programatically explain concepts in statistics, machine learning, data science, etc. During my PhD., I had created these notebooks to get a better understanding of the concepts. It was often easier for me to understand an algorithm or concept if I could program it and then play around with the parameters and visualise the effect.
 
 ### Index
 
