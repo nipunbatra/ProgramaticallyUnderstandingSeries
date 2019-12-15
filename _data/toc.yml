@@ -20,4 +20,5 @@
 - url: /blog
   not_numbered: true
 
-- url: 2019/GP-1
+- title: Programatically understand Gaussian Processes
+  url: 2019/GP-1
