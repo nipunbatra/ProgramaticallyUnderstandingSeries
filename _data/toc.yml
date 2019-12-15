@@ -17,7 +17,7 @@
 # - header: My Header  # Will insert a header with no link in the sidebar
 
 
-#- url: /intro
-#  not_numbered: true
+- url: /intro
+  not_numbered: true
 
 - url: /GP-1
