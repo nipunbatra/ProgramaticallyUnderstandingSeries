@@ -16,12 +16,19 @@
 # - divider: true  # Will insert a divider in the sidebar
 # - header: My Header  # Will insert a header with no link in the sidebar
 
-
 - url: /blog
   not_numbered: true
 
 - url: 2019/GP-1
-  not_numbered: true
+  not_numbered: false
+  expand_sections: true
+  sections:
+  - url: 2018/Placement-Preparation-2018-1-HashMap
 
-- url: 2018/Placement-Preparation-2018-1-HashMap
-  not_numbered: true
+
+
+#- url: 2019/GP-1
+#  not_numbered: true
+#
+#- url: 2018/Placement-Preparation-2018-1-HashMap
+#  not_numbered: true
