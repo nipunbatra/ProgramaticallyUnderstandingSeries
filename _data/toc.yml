@@ -20,8 +20,9 @@
 - url: /blog
   not_numbered: true
 
-- url: 2019/GP-1
+- title: Gaussian
+  url: 2019/GP-1
   not_numbered: true
 
-- url: 2018/Placement-Preparation-2018-1-HashMap.ipynb
+- url: 2018/Placement-Preparation-2018-1-HashMap
   not_numbered: true

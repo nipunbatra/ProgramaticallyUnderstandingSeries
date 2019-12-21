@@ -1,0 +1,13 @@
+2019-03-29 09:44:39,044 INFO osmnx Configured osmnx
+2019-03-29 09:44:59,137 INFO osmnx Pausing 1.00 seconds before making API GET request
+2019-03-29 09:45:00,138 INFO osmnx Requesting https://nominatim.openstreetmap.org/search?format=json&limit=1&dedupe=0&polygon_geojson=1&q=New+Delhi%2C+India with timeout=30
+2019-03-29 09:45:01,418 INFO osmnx Downloaded 5.6KB from nominatim.openstreetmap.org in 1.28 seconds
+2019-03-29 09:45:01,419 INFO osmnx Saved response to cache file "cache/1a73436a64d3d3398337dc8ef7703134.json"
+2019-03-29 09:45:01,424 INFO osmnx Created GeoDataFrame with 1 row for query "New Delhi, India"
+2019-03-29 09:45:01,451 INFO osmnx Saved the GeoDataFrame "New Delhi, India" as shapefile "data/india-new_delhi"
+2019-03-29 09:45:01,458 INFO osmnx Projected the GeoDataFrame "New Delhi, India" to UTM-43 in 0.01 seconds
+2019-03-29 09:45:13,350 INFO osmnx Pausing 1.00 seconds before making API GET request
+2019-03-29 09:45:14,354 INFO osmnx Requesting https://nominatim.openstreetmap.org/search?format=json&limit=1&dedupe=0&polygon_geojson=1&q=Gandhingar%2C+India with timeout=30
+2019-03-29 09:45:15,517 INFO osmnx Downloaded 0.0KB from nominatim.openstreetmap.org in 1.16 seconds
+2019-03-29 09:45:15,518 INFO osmnx Saved response to cache file "cache/88cc6acb77c42917df51f5a304457cc4.json"
+2019-03-29 09:45:15,518 WARNING osmnx OSM returned no results (or fewer than which_result) for query "Gandhingar, India"

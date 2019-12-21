@@ -1,0 +1,13 @@
+--2018-06-26 09:33:28--  http://api.worldbank.org/v2/en/indicator/EG.ELC.ACCS.ZS?downloadformat=csv
+Resolving api.worldbank.org (api.worldbank.org)... 52.202.62.0
+Connecting to api.worldbank.org (api.worldbank.org)|52.202.62.0|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 52467 (51K) [application/zip]
+Saving to: ‘wbi-data/EG.ELC.ACCS.ZS?downloadformat=csv’
+
+     0K .......... .......... .......... .......... .......... 97% 81.6K 0s
+    50K .                                                     100% 24.7K=0.6s
+
+Last-modified header missing -- time-stamps turned off.
+2018-06-26 09:33:30 (83.6 KB/s) - ‘wbi-data/EG.ELC.ACCS.ZS?downloadformat=csv’ saved [52467/52467]
+

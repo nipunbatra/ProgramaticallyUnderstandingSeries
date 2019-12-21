@@ -1,0 +1,74 @@
+\documentclass[varwidth]{standalone}
+\usepackage{forest}
+\usepackage{pgfplots}
+\usepackage{fontspec}
+\setmainfont{Humor Sans}
+\usepackage{fullpage}
+
+
+\title{\large{The Illustrated Guide to How academics spend their time}\vspace{-40pt}}
+\date{}
+\begin{document}
+
+\maketitle
+\begin{forest}
+ for tree={
+ 	calign = center,
+ 	edge path={
+ 		\noexpand\path[\forestoption{edge}](!u.parent anchor) -- +(6pt,0) |- (.child anchor)\forestoption{edge label};},
+ 	grow=0,
+ 	reversed, % tree direction
+ 	parent anchor=east,
+ 	child anchor=west, % edge anchors
+ 	anchor=west,
+ 	align=center
+ }
+[
+Time
+[Research
+[Meet students]
+[Write papers]
+[Raise money
+[Write grants]
+[Talk to companies]
+]
+[Promote work
+[Give talks]
+[Social media/Blogs]
+]
+[Think hard]
+[Develop systems]
+]
+[Teaching
+[Prepare lectures; assignments; etc.]
+[Teach]
+[Grade]
+[Supervise Teaching Assistants]
+[Office Hours]
+[Take Labs]
+]
+[Service
+[Academic
+[Review papers]
+[Attend TPC meetings]
+[Organise conferences]
+]
+[Institute/Department
+[Student recruitment]
+[Faculty recruitment]
+[Organise seminars]
+[Serving on committees]
+]
+]
+[Administration
+[Reimbursements]
+[Plan research travel]
+[Miscellaneous]
+]
+[Meta
+[Plan all of the above and always fall short]
+[Procrastrinate]
+]
+]
+\end{forest}
+\end{document}
