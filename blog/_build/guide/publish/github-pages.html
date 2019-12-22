@@ -1,0 +1,99 @@
+---
+title: |-
+  Publishing your book with GitHub Pages
+pagenum: 7
+prev_page:
+  url: /guide/publish/book-html.html
+next_page:
+  url: /guide/publish/netlify.html
+suffix: .md
+search: github html pages book site repository build books branch should built push ghp import url building folder gh content contents assume website files manually jekyll publish tell confirm tool changes host using also created create online builder template pushed well need activate follow steps collection folders install pushing bash n p f nojekyll file enable click settings scroll section message published ensure youre listed live automatically publishing free service provides com let repositories once youve intermediate others access prerequisites already serve our contains raw not command line quickly pip onto adds run h configuration options newly root youll order repositorys
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Publishing your book with GitHub Pages</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GitHub pages is a <a href="https://pages.github.com/">free service that GitHub provides</a> to let you host website content
+using your GitHub repositories.</p>
+<p>Once you've built the intermediate files for your book (in <code>_build</code>) or built the HTML
+for your book (in <code>_site</code>), you can push your book contents to GitHub so that
+others can access your book.</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li><p><strong>If you are building your book's HTML manually</strong></p>
+<p>We assume that you have already <a href="book-html.html">built your book's HTML</a> and that
+your HTML content is in the <code>_site/</code> folder. We also assume that you have a
+<a href="../03_build.html#Create-an-online-repository-for-your-book">GitHub repository created for your book</a>.</p>
+</li>
+<li><p><strong>If you are using GitHub-page's Jekyll builder</strong></p>
+<p>We assume that you have a
+<a href="../03_build.html#Create-an-online-repository-for-your-book">GitHub repository created for your book</a>.
+We also assume that your book's template and content have been pushed to
+your GitHub repository.</p>
+</li>
+</ul>
+<h2 id="Publish-your-book's-HTML-manually-to-GitHub-pages">Publish your book's HTML manually to GitHub-pages<a class="anchor-link" href="#Publish-your-book's-HTML-manually-to-GitHub-pages"> </a></h2><p>You can manually publish HTML to GitHub-pages so that it will serve a website
+for you. To do so, we'll need to push the HTML for our book to a branch, tell GitHub-pages
+that this branch contains raw HTML (not a Jekyll template), and then activate
+GitHub-pages on the repository. To do this, follow these steps:</p>
+<ol>
+<li>Confirm that your book's HTML is built. You should see a
+collection of HTML files/folders in the <code>_site</code> folder.</li>
+<li><p>Install the <code>ghp-import</code> tool. This is a command-line tool for
+quickly pushing some built HTML to a GitHub-pages branch.</p>
+<div class="highlight"><pre><span></span>pip install ghp-import
+</pre></div>
+</li>
+<li><p>Use <code>ghp-import</code> to push your book's HTML onto the <code>gh-pages</code> branch of your repository.</p>
+<div class="highlight"><pre><span></span>ghp-import -n -p -f _site
+</pre></div>
+<p>The <code>-n</code> adds a <code>.nojekyll</code> file to your book's built HTML, and the <code>-p</code> and <code>-f</code> tell
+<code>ghp-import</code> to push the contents of <code>_site/</code> to the <code>gh-pages</code> branch. Run <code>ghp-import -h</code>
+to see more configuration options for this tool.</p>
+</li>
+<li>Confirm that your <code>gh-pages</code> branch has newly-pushed HTML for your book. You should see
+a <code>.nojekyll</code> file as well as the contents of <code>_site/</code> in the <strong>root</strong> of your <code>gh-pages</code> branch.</li>
+<li><p>Enable GitHub site building for your repository.</p>
+<p>From your GitHub repository, click <code>Settings</code> then scroll down to the
+<code>GitHub Pages</code> section. You should see the message <code>Your site is published at &lt;YOUR-URL&gt;</code>.
+Ensure that you're building from the <code>gh-pages</code> branch.</p>
+</li>
+<li><p>Go to the URL listed at <code>&lt;YOUR-URL&gt;</code> and you should see your live site.</p>
+</li>
+</ol>
+<h2 id="Automatically-build-your-book's-HTML-with-the-GitHub-Pages-Jekyll-builder">Automatically build your book's HTML with the GitHub Pages Jekyll builder<a class="anchor-link" href="#Automatically-build-your-book's-HTML-with-the-GitHub-Pages-Jekyll-builder"> </a></h2><p>You'll need to activate GitHub-pages on your repository in order to tell GitHub
+to host a website from the repository's contents.
+To do so, follow these steps:</p>
+<ol>
+<li>Confirm that each page's HTML is built. You should see a
+collection of HTML files/folders in the <code>_build</code> folder.</li>
+<li>Commit and push the changes to your repository.</li>
+<li><p>Enable GitHub site building for your repository.</p>
+<p>From your GitHub repository, click <code>Settings</code> then scroll down to the
+<code>GitHub Pages</code> section. You should see the message <code>Your site is published at &lt;YOUR-URL&gt;</code>.
+Ensure that you're building from the correct folder.</p>
+</li>
+<li><p>Go to the URL listed at <code>&lt;YOUR-URL&gt;</code> and you should see your live site.</p>
+</li>
+</ol>
+<p>That should be all that is needed for GitHub Pages to automatically build
+and publish your site. Any time you push changes to the <code>_build/</code> folder
+(by running <code>jupyter-book build</code> locally and pushing the changes to GitHub),
+your book content will update.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

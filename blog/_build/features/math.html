@@ -1,0 +1,187 @@
+---
+interact_link: content/features/math.ipynb
+kernel_name: python3
+kernel_path: content/features
+has_widgets: false
+title: |-
+  Typesetting Math in your book
+pagenum: 19
+prev_page:
+  url: /features/interactive_cells.html
+next_page:
+  url: /features/titles.html
+suffix: .ipynb
+search: frac equation int infty x ex dx pi tag equations mylabel math label mathjax latex numbering example ref blocks link book allows page html insert text block begin results refer following typesetting docs org automatic line inline also include end youd notag elsewhere mjx eqn using jupyter uses style mathematics online content shows few ways control information documentation en v latest tex symbol within markdown cell produce separate focus attention complex longer well pages wrap either statements built support makes possible easily reference throughout add provides inserted code numbered activate configuration config yml file yaml numberequations true case numbers deactivate
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Typesetting Math in your book</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Jupyter Book uses <a href="http://docs.mathjax.org/">MathJax</a> for typesetting math in your
+book. This allows you to have LaTeX-style mathematics in your online content.
+This page shows you a few ways to control this.</p>
+<p>For more information about equation numbering, see the
+<a href="http://docs.mathjax.org/en/v2.7-latest/tex.html#automatic-equation-numbering">MathJax equation numbering documentation</a>.</p>
+<h1 id="In-line-math">In-line math<a class="anchor-link" href="#In-line-math"> </a></h1><p>To insert in-line math use the <code>$</code> symbol within a Markdown cell.
+For example, the text <code>$this_{is}^{inline}$</code> will produce: $this_{is}^{inline}$.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Math-blocks">Math blocks<a class="anchor-link" href="#Math-blocks"> </a></h1><p>You can also include math blocks for separate equations. This allows you to focus attention
+on more complex or longer equations, as well as link to them in your pages. To use a block
+equation, wrap the equation in either <code>$$</code> or <code>\begin</code> statements.</p>
+<p>For example,</p>
+<div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+  <span class="k">\int</span><span class="nb">_</span>0<span class="nb">^</span><span class="k">\infty</span> <span class="k">\frac</span><span class="nb">{</span>x<span class="nb">^</span>3<span class="nb">}{</span>e<span class="nb">^</span>x-1<span class="nb">}</span><span class="k">\,</span>dx = <span class="k">\frac</span><span class="nb">{</span><span class="k">\pi</span><span class="nb">^</span>4<span class="nb">}{</span>15<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+<p>results in</p>
+\begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+\end{equation}
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and</p>
+<div class="highlight"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+<span class="nb">  </span><span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="nv">\infty</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{x^</span><span class="m">3</span><span class="nb">}{e^x</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="nv">\,</span><span class="nb">dx </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">^</span><span class="m">4</span><span class="nb">}{</span><span class="m">15</span><span class="nb">}</span>
+<span class="s">$$</span>
+</pre></div>
+<p>results in</p>
+$$
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+$$
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Numbering-equations">Numbering equations<a class="anchor-link" href="#Numbering-equations"> </a></h2><p>MathJax has built-in support for numbering equations. This makes it possible to
+easily reference equations throughout your page. To do so, add this tag
+to a block equation:</p>
+<p><code>\tag{&lt;number&gt;}</code></p>
+<p>The <code>\tag</code> provides a number for the equation that will be inserted when you refer
+to it in the text.</p>
+<p>For example, the following code:</p>
+<div class="highlight"><pre><span></span>equation 1
+<span class="sb">$$</span><span class="nb"></span>
+<span class="nb">  </span><span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="nv">\infty</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{x^</span><span class="m">3</span><span class="nb">}{e^x</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="nv">\,</span><span class="nb">dx </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">^</span><span class="m">4</span><span class="nb">}{</span><span class="m">15</span><span class="nb">}</span>
+<span class="nb">  </span><span class="nv">\tag</span><span class="nb">{</span><span class="m">1</span><span class="nb">}</span>
+<span class="s">$$</span>
+
+equation 2
+
+<span class="sb">$$</span><span class="nb"></span>
+<span class="nb">  </span><span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="nv">\infty</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{x^</span><span class="m">3</span><span class="nb">}{e^x</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="nv">\,</span><span class="nb">dx </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">^</span><span class="m">4</span><span class="nb">}{</span><span class="m">15</span><span class="nb">}</span>
+<span class="nb">  </span><span class="nv">\tag</span><span class="nb">{</span><span class="m">2</span><span class="nb">}</span>
+<span class="s">$$</span>
+
+equation 999
+
+<span class="sb">$$</span><span class="nb"></span>
+<span class="nb">  </span><span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="nv">\infty</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{x^</span><span class="m">3</span><span class="nb">}{e^x</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="nv">\,</span><span class="nb">dx </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">^</span><span class="m">4</span><span class="nb">}{</span><span class="m">15</span><span class="nb">}</span>
+<span class="nb">  </span><span class="nv">\tag</span><span class="nb">{</span><span class="m">999</span><span class="nb">}</span>
+<span class="s">$$</span>
+</pre></div>
+<p>Results in these math blocks:</p>
+<p>equation 1
+$$
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \tag{1}
+$$</p>
+<p>equation 2</p>
+$$
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \tag{2}
+$$<p>equation 999</p>
+$$
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \tag{999}
+$$<h3 id="Automatic-numbering">Automatic numbering<a class="anchor-link" href="#Automatic-numbering"> </a></h3><p>If you'd like <strong>all</strong> block equations to be numbered with MathJax, you can activate
+this with the following configuration in your <code>_config.yml</code> file:</p>
+<div class="highlight"><pre><span></span><span class="nt">number_equations</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+<p>In this case, all equations will have numbers. If you'd like to deactivate
+an equation's number, include a <code>\notag</code> with your equation, like so:</p>
+<div class="highlight"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+<span class="nb">  </span><span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="nv">\infty</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{x^</span><span class="m">3</span><span class="nb">}{e^x</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="nv">\,</span><span class="nb">dx </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">^</span><span class="m">4</span><span class="nb">}{</span><span class="m">15</span><span class="nb">}</span>
+<span class="nb">  </span><span class="nv">\notag</span><span class="nb"></span>
+<span class="s">$$</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Linking-to-equations">Linking to equations<a class="anchor-link" href="#Linking-to-equations"> </a></h2><p>Adding <code>\label{mylabel}</code> to an equation allows you to refer to the equation elsewhere in the page. You
+can define a human-friendly label and MathJax will insert an anchor with the following form:</p>
+<div class="highlight"><pre><span></span>#mjx-eqn-mylabel
+</pre></div>
+<p>If you use <code>\label</code> in conjunction with <code>\tag</code>, then you can insert references directly to an equation
+by using the <code>\ref</code> syntax. For example, here's an equation with a tag and label:</p>
+<div class="highlight"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+<span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="nv">\infty</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{x^</span><span class="m">3</span><span class="nb">}{e^x</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="nv">\,</span><span class="nb">dx </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">^</span><span class="m">4</span><span class="nb">}{</span><span class="m">15</span><span class="nb">}</span>
+<span class="nv">\label</span><span class="nb">{mylabel</span><span class="m">1</span><span class="nb">}</span><span class="nv">\tag</span><span class="nb">{</span><span class="m">24</span><span class="nb">}</span>
+<span class="s">$$</span>
+
+<span class="sb">$$</span><span class="nb"></span>
+<span class="nv">\int</span><span class="nb">_</span><span class="m">0</span><span class="nb">^</span><span class="nv">\infty</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{x^</span><span class="m">3</span><span class="nb">}{e^x</span><span class="o">-</span><span class="m">1</span><span class="nb">}</span><span class="nv">\,</span><span class="nb">dx </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb">^</span><span class="m">4</span><span class="nb">}{</span><span class="m">15</span><span class="nb">}</span>
+<span class="nv">\label</span><span class="nb">{mylabel</span><span class="m">2</span><span class="nb">}</span><span class="nv">\tag</span><span class="nb">{</span><span class="m">25</span><span class="nb">}</span>
+<span class="s">$$</span>
+</pre></div>
+$$
+\int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+\label{mylabel1}\tag{24}
+$$$$
+\int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+\label{mylabel2}\tag{25}
+$$<p>Now, we can refer to these math blocks with <code>\ref</code> elements. For example,
+we can mention Equation \ref{mylabel1} using <code>\ref{mylabel1}</code> and
+Equation \ref{mylabel2} with <code>\ref{mylabel2}</code>.</p>
+<p>Note that these equations also have anchors on them, which can be used to link
+to an equation from elsewhere, for example with this link text:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#mjx-eqn-mylabel2&quot;</span><span class="p">&gt;</span>My link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    </main>
+    

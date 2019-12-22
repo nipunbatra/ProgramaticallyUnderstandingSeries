@@ -1,0 +1,87 @@
+---
+redirect_from:
+  - "/guide/02-create"
+title: |-
+  Create your Jupyter Book template
+pagenum: 3
+prev_page:
+  url: /guide/01-5_tour.html
+next_page:
+  url: /guide/03_build.html
+suffix: .md
+search: book jupyter create content mybookname yml toc myoldbook bash config command new using demo files youve following table contents modify data generate folder structure md template got running pages need add configuration youd quickly section pre existing books tests mylicense myextrafolder next html page covers own three primary ways starting minimal few get started youll match note choose later basic modifying fully functioning inspiration lives website jupyterbook org adding flag previous description relevant should used before set folders available arguments line interface example roottest images myextrafile txt license extra case ensure values correct file want step convert into thats covered
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Create your Jupyter Book template</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This page covers how to create a Jupyter Book with your own content.
+You've got three primary ways to create your Jupyter Book.</p>
+<h2 id="by-starting-with-a-minimal-book">by starting with a minimal book<a class="anchor-link" href="#by-starting-with-a-minimal-book"> </a></h2><p>Running the following command will create a new Jupyter Book with a few
+content pages and a Table of Contents to get you started:</p>
+<div class="highlight"><pre><span></span>jupyter-book create mybookname
+</pre></div>
+<p>This will create a new book using your content in <code>mybookname/</code>. You'll then need to</p>
+<ol>
+<li>Add your content to <code>mybookname/content/</code></li>
+<li>Modify <code>mybookname/_data/toc.yml</code> to match your content</li>
+<li>Modify <code>mybookname/_config.yml</code> to the configuration you'd like</li>
+</ol>
+<p>Note that if you choose to create the book template and later add content
+to it, you can quickly <strong>generate a basic Table of Contents</strong> by running
+the following command:</p>
+<div class="highlight"><pre><span></span>jupyter-book toc mybookname/
+</pre></div>
+<h2 id="by-modifying-the-Demo-Book">by modifying the Demo Book<a class="anchor-link" href="#by-modifying-the-Demo-Book"> </a></h2><p>If you'd like to see a more fully-functioning demo book for inspiration, you can
+create the book that lives at the <a href="https://jupyterbook.org">jupyter-book website</a>
+by adding the <code>--demo</code> flag:</p>
+<div class="highlight"><pre><span></span>jupyter-book create mybookname --demo
+</pre></div>
+<p>See the previous section for a description of all of the relevant files you
+should modify for your book.</p>
+<h2 id="by-using-a-pre-existing-book-configuration">by using a pre-existing book configuration<a class="anchor-link" href="#by-using-a-pre-existing-book-configuration"> </a></h2><p>If you've used Jupyter Book before, you can quickly generate a <em>new</em> book using a pre-existing
+set of folders and files. These are all available as arguments in the command line interface.</p>
+<p>For example, if you have your book's content in a folder structure like this:</p>
+<div class="highlight"><pre><span></span>myoldbook/
+├── content
+│   ├── root_test.md
+│   └── tests
+├── _data
+│   └── toc.yml
+├── images
+│   └── tests
+├── mylicense.md
+├── myextrafolder
+│   └── myextrafile.txt
+└── config.yml
+</pre></div>
+<p>You can generate a Jupyter Book from it with the following command:</p>
+<div class="highlight"><pre><span></span>jupyter-book create mybookname --content-folder myoldbook/content <span class="se">\</span>
+                               --toc myoldbook/_data/toc.yml <span class="se">\</span>
+                               --config myoldbook/_config.yml <span class="se">\</span>
+                               --license myoldbook/mylicense.md <span class="se">\</span>
+                               --extra-files myoldbook/myextrafolder
+</pre></div>
+<p>This will create a new Jupyter Book using these files. In this case, you need to ensure
+that the values in <code>_config.yml</code> are correct, and that the Table of Contents (<code>toc.yml</code>) file
+has the structure that you want.</p>
+<h2 id="Next-step:-convert-your-book-content-into-HTML">Next step: convert your book content into HTML<a class="anchor-link" href="#Next-step:-convert-your-book-content-into-HTML"> </a></h2><p>Now that you've got a Jupyter Book folder structure, we can create
+the HTML for each of your book's pages. That's covered in the next
+section.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

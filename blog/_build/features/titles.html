@@ -1,0 +1,62 @@
+---
+interact_link: content/features/titles.ipynb
+kernel_name: python3
+kernel_path: content/features
+has_widgets: false
+title: |-
+  Page titles and authors
+author: Jo the Jovyan
+pagenum: 20
+prev_page:
+  url: /features/math.html
+next_page:
+  url: /features/citations.html
+suffix: .ipynb
+search: pages title page book books jupyter file field titles yml adding add configuration config following true top determined metadata line author authors notebooks dont internal concept its common want official enable setting yaml pagetitles case display determines looking locations descending order priority entry table contents toc level header content name extension removed spaces key filenametitlesplitcharacter authorship also pageauthors parameter set defined shown rendered
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Page titles and authors</div>
+<div id="page-author">Jo the Jovyan</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-titles-to-your-book's-pages">Adding titles to your book's pages<a class="anchor-link" href="#Adding-titles-to-your-book's-pages"> </a></h2><p>Jupyter Notebooks don't have an internal concept of a "title", but it's common
+to want an official title for each page of your book. Jupyter Book will add titles
+to your pages. You can enable this in your book's configuration file (<code>config.yml</code>)
+with the following setting:</p>
+<div class="highlight"><pre><span></span><span class="nt">page_titles</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+<p>In this case, Jupyter Book will display the page's title at the top of each page.</p>
+<h3 id="How-is-the-page's-title-determined?">How is the page's title determined?<a class="anchor-link" href="#How-is-the-page's-title-determined?"> </a></h3><p>Jupyter Book determines each page's title by looking in the following locations,
+in descending order of priority:</p>
+<ul>
+<li>A <code>title:</code> field for this entry in the book's Table of Contents file (<code>toc.yml</code>)</li>
+<li>A <code>title:</code> field in the page's metadata</li>
+<li>A top-level header (<code>#</code>) in the first line of the page's content</li>
+<li>The file name of the page, with the extension removed and spaces determined
+by the book configuration key <code>filename_title_split_character:</code>.</li>
+</ul>
+<h2 id="Adding-authorship-to-your-book's-pages">Adding authorship to your book's pages<a class="anchor-link" href="#Adding-authorship-to-your-book's-pages"> </a></h2><p>You can also add an author by-line to each page of your book. To do so, use
+the <code>page_authors:</code> parameter in your book's <code>_config.yml</code> file. If set to
+true, then if a page's metadata has a defined <code>author:</code> field, then this field
+will be shown on the rendered page.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    </main>
+    

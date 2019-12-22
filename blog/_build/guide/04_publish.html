@@ -1,0 +1,101 @@
+---
+redirect_from:
+  - "/guide/04-publish"
+title: |-
+  Publishing your book online
+pagenum: 5
+prev_page:
+  url: /guide/03_build.html
+next_page:
+  url: /guide/publish/book-html.html
+suffix: .md
+search: book html github pages build books repository online locally building create host site files jekyll add new git myonlinebook page into publish jupyter automatically content bash created publishing youve built its together option manually push also ruby run guide information template should auto any extra plugins need youd own section folder com next name clone copy mylocalbook commit stitch means left table contents stitching got options wherever lets preview before gives functionality using however requires install open source programming language containerization platform docker singularity generates structure website generate might ask intermediate why main reason get flexibility serving raw opposed wish
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Publishing your book online</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that you've built the HTML for each <strong>page</strong>, it's
+time to stitch together these pages into HTML for a <strong>book</strong>
+and host it online. This means building the left Table of Contents and
+stitching each of your pages together.</p>
+<p>You've got two options to do this.</p>
+<ol>
+<li><p><strong>Option 1: Build your book's HTML manually and host wherever you like</strong>:</p>
+<p>Building your book's site locally lets you preview your book locally before you
+push it online. It also gives you more functionality than using
+GitHub Pages to build your book. However, it also requires you to install
+Ruby (an open source programming language) or to run Ruby with a containerization
+platform like Docker or Singularity.</p>
+<p>See the <a href="publish/book-html.html">guide to building your book's HTML manually</a> for information
+on how to do this.</p>
+</li>
+<li><p><strong>Option 2: Use GitHub Pages to build and host your book</strong>:</p>
+<p>When you run <code>jupyter-book create</code> it generates the structure of a Jekyll
+template. GitHub Pages can automatically build a website from a Jekyll template,
+and you can use this to automatically generate the HTML for your book.</p>
+<p>See the <a href="publish/github-pages.html">guide to building books with GitHub Pages</a>
+for information on how to do this.</p>
+</li>
+</ol>
+<h2 id="When-should-you-build-the-HTML-locally?">When should you build the HTML locally?<a class="anchor-link" href="#When-should-you-build-the-HTML-locally?"> </a></h2><p>You might ask: if GitHub pages can build my site automatically from the intermediate files, why
+build it locally? The main reason for this is that you get more flexibility by building locally
+and serving raw HTML, as opposed to auto-building the site with GitHub-pages.</p>
+<p>If you wish to use any <strong>extra Jekyll plugins</strong>, such as the <code>jekyll-scholar</code> plugin that
+enables you to add citations and bibliographies, then you need to build your site
+locally as HTML. GitHub Pages doesn't let you enable any extra plugins if it auto-builds your site.
+In addition, if you'd like to <strong>host your book's HTML anyhwere other than GitHub Pages</strong>,
+then you'll need to build the book's HTML on your own.</p>
+<h3 id="Prerequisites">Prerequisites<a class="anchor-link" href="#Prerequisites"> </a></h3><p>Ensure that your the HTML has been built for each page of your book
+(see <a href="03_build.html">the previous section</a>). There should be a collection of HTML
+files in your book's <code>_build/</code> folder.</p>
+<h2 id="Create-an-online-repository-for-your-book">Create an <em>online</em> repository for your book<a class="anchor-link" href="#Create-an-online-repository-for-your-book"> </a></h2><p>Regardless of the approach you use for publishing your book online, it will require
+you to host your book's content in a GitHub repository.</p>
+<p>This section covers the steps to create your own GitHub repository,
+and to add your book's content to it.</p>
+<ol>
+<li><p>First, log-in to GitHub, then go to the "create a new repository" page:</p>
+<p><a href="https://github.com/new">https://github.com/new</a></p>
+</li>
+<li><p>Next, add a name and description for your book. You can choose whatever
+initialization you'd like.</p>
+</li>
+<li><p>Now, clone the empty repository to your computer:</p>
+<div class="highlight"><pre><span></span>git clone https://github.com/&lt;my-org&gt;/&lt;my-book-name&gt;
+</pre></div>
+</li>
+<li><p>Copy all of your book files and folders (what was created when you ran <code>jupyter-book create mybook</code>)
+into the new repository. For example, if you created your book locally with <code>jupyter-book create mylocalbook</code>
+and your online repository is called <code>myonlinebook</code>, the command would be:</p>
+<div class="highlight"><pre><span></span>cp -r mylocalbook/* myonlinebook/
+</pre></div>
+<p>This will copy over the local book files into the online book folder.</p>
+</li>
+<li><p>Commit the new files to the repository in <code>myonlinebook/</code>:</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> myonlinebook
+git add ./*
+git commit -m <span class="s2">&quot;adding my first book!&quot;</span>
+git push
+</pre></div>
+</li>
+</ol>
+<p>That's it!</p>
+<p>Now that your repository is created and you have your book content pushed to it,
+it's time to publish your book online. The next sections cover how to do this.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
